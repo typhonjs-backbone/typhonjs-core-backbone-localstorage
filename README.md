@@ -1,11 +1,11 @@
 ![typhonjs-core-backbone-localstorage](http://i.imgur.com/De4CUnb.png)
 
-[![Documentation](http://js.docs.typhonrt.org/typhonjs-core-backbone-localstorage/badge.svg)](http://js.docs.typhonrt.org/backbone-es6/)
+[![Documentation](http://js.docs.typhonrt.org/typhonjs/typhonjs-core-backbone-localstorage/badge.svg)](http://js.docs.typhonrt.org/typhonjs/typhonjs-core-backbone-localstorage/)
 [![Code Style](https://img.shields.io/badge/code%20style-allman-yellowgreen.svg?style=flat)](https://en.wikipedia.org/wiki/Indent_style#Allman_style)
 [![License](https://img.shields.io/badge/license-MIT-yellowgreen.svg?style=flat)](https://github.com/typhonjs/typhonjs-core-backbone-localstorage/blob/master/LICENSE)
 
 [![Build Status](https://travis-ci.org/typhonjs/typhonjs-core-backbone-localstorage.svg?branch=master)](https://travis-ci.org/typhonjs/typhonjs-core-backbone-localstorage)
-[![Dependency Status](https://www.versioneye.com/user/projects/563b3b1c1d47d40015000a91/badge.svg?style=flat)](https://www.versioneye.com/user/projects/563b3b1c1d47d40015000a91)
+[![Dependency Status](https://www.versioneye.com/user/projects/56b499c30a0ff5002c85f70f/badge.svg?style=flat)](https://www.versioneye.com/user/projects/56b499c30a0ff5002c85f70f)
 
 An ES6 module to replace `Backbone.sync` with browser `localStorage`-based persistence. Models are given GUIDS
 and saved into a JSON object. Please see 
@@ -14,7 +14,7 @@ CJS, UMD and global consumption.
 
 For the latest significant changes please see the [CHANGELOG](https://github.com/typhonjs/typhonjs-core-backbone-localstorage/blob/master/CHANGELOG.md).
 
-API documentation can be found in the [/docs](https://github.com/typhonjs/typhonjs-core-backbone-localstorage/tree/master/docs) directory and [online here](http://js.docs.typhonrt.org/typhonjs-core-backbone-localstorage/).
+API documentation can be found in the [/docs](https://github.com/typhonjs/typhonjs-core-backbone-localstorage/tree/master/docs) directory and [online here](http://js.docs.typhonrt.org/typhonjs/typhonjs-core-backbone-localstorage/).
 
 ## Usage
 
