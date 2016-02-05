@@ -7,10 +7,10 @@ and saved into a JSON object.
 
 The recommended way to consume `typhonjs-core-backbone-localstorage` is via JSPM / SystemJS via an ES6 project.
 
-Please see this JSPM / SystemJS / ES6 demo: https://github.com/typhonjs-demos/backbone-es6-localstorage-todos
+Please see this JSPM / SystemJS / ES6 demo: [backbone-es6-localstorage-todos](https://github.com/typhonjs-demos/backbone-es6-localstorage-todos)
 
-In addition there is a desktop version using Electron here:
-https://github.com/typhonjs-demos/electron-backbone-es6-localstorage-todos
+In addition there is a desktop version using [Electron](http://electron.atom.io/) here:
+[electron-backbone-es6-localstorage-todos](https://github.com/typhonjs-demos/electron-backbone-es6-localstorage-todos)
 
 ------
 
@@ -34,7 +34,7 @@ window.SomeCollection = Backbone.Collection.extend({
 ```
 
 If needed, you can use the default `Backbone.sync` (instead of local storage) by passing the `origSync` option flag
-to any Backbone function, for example:
+to any Backbone function that takes optional parameters, for example:
 
 ```javascript
 var myModel = new SomeModel();
@@ -42,7 +42,7 @@ myModel.fetch({ origSync: true });
 myModel.save({ new: "value" }, { origSync: true });
 ```
 
-Please see this global ES5 demo: https://github.com/typhonjs-demos/backbone-es6-localstorage-todos-global-es5
+Please see this global ES5 demo: [backbone-es6-localstorage-todos-global-es5](https://github.com/typhonjs-demos/backbone-es6-localstorage-todos-global-es5)
 
 ### RequireJS
 
@@ -82,8 +82,9 @@ require(["SomeCollection"], function(SomeCollection) {
 });
 ```
 
-Please see this RequireJS ES5 demo: https://github.com/typhonjs-demos/backbone-es6-localstorage-todos-requirejs-es5
+Please see this RequireJS ES5 demo: [backbone-es6-localstorage-todos-requirejs-es5](https://github.com/typhonjs-demos/backbone-es6-localstorage-todos-requirejs-es5)
 
-This code was forked and updated to ES6 from: https://github.com/jeromegn/Backbone.localStorage
+This code was forked and updated to ES6 from: 
+[Backbone.localStorage](https://github.com/jeromegn/Backbone.localStorage)
 
-Original author: Jerome Gravel-Niquet
+Original author: [Jerome Gravel-Niquet](https://github.com/jeromegn) (many thanks!)
