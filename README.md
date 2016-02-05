@@ -1,7 +1,9 @@
 # typhonjs-core-backbone-localstorage
 
-A simple module to replace `Backbone.sync` with browser `localStorage`-based persistence. Models are given GUIDS
-and saved into a JSON object.
+An ES6 module to replace `Backbone.sync` with browser `localStorage`-based persistence. Models are given GUIDS
+and saved into a JSON object. Please see 
+[./dist](https://github.com/typhonjs/typhonjs-core-backbone-localstorage/tree/master/dist) for ES5 bundles for AMD, 
+CJS, UMD and global consumption.
 
 ## Usage
 
