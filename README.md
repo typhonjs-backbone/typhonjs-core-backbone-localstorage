@@ -18,9 +18,9 @@ API documentation can be found in the [/docs](https://github.com/typhonjs/typhon
 
 ## Usage
 
-The recommended way to consume `typhonjs-core-backbone-localstorage` is via JSPM / SystemJS via an ES6 project.
+The recommended way to consume `typhonjs-core-backbone-localstorage` is via [JSPM](http://jspm.io/) / [SystemJS](https://github.com/systemjs/systemjs) via an ES6 project.
 
-Please see this [JSPM](http://jspm.io/) / [SystemJS](https://github.com/systemjs/systemjs) / ES6 demo: [backbone-es6-localstorage-todos](https://github.com/typhonjs-demos/backbone-es6-localstorage-todos)
+Please see this JSPM / SystemJS / ES6 demo: [backbone-es6-localstorage-todos](https://github.com/typhonjs-demos/backbone-es6-localstorage-todos)
 
 In addition there is a desktop version using [Electron](http://electron.atom.io/) here:
 [electron-backbone-es6-localstorage-todos](https://github.com/typhonjs-demos/electron-backbone-es6-localstorage-todos)
@@ -111,6 +111,8 @@ require(["SomeCollection"], function(SomeCollection) {
 ```
 
 Please see this RequireJS ES5 demo: [backbone-es6-localstorage-todos-requirejs-es5](https://github.com/typhonjs-demos/backbone-es6-localstorage-todos-requirejs-es5)
+
+------
 
 To suggest a feature or report a bug:
 https://github.com/typhonjs/typhonjs-core-backbone-localstorage/issues
