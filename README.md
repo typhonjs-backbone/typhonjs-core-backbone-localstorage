@@ -112,6 +112,8 @@ require(["SomeCollection"], function(SomeCollection) {
 
 Please see this RequireJS ES5 demo: [backbone-es6-localstorage-todos-requirejs-es5](https://github.com/typhonjs-demos/backbone-es6-localstorage-todos-requirejs-es5)
 
+------
+
 To suggest a feature or report a bug:
 https://github.com/typhonjs/typhonjs-core-backbone-localstorage/issues
 
