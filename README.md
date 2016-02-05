@@ -14,8 +14,7 @@ CJS, UMD and global consumption.
 
 For the latest significant changes please see the [CHANGELOG](https://github.com/typhonjs/typhonjs-core-backbone-localstorage/blob/master/CHANGELOG.md).
 
-API documentation can be found in the [/docs](https://github.com/typhonjs/typhonjs-core-backbone-localstorage/tree/master/docs) directory and online here:
-http://js.docs.typhonrt.org/typhonjs-core-backbone-localstorage/
+API documentation can be found in the [/docs](https://github.com/typhonjs/typhonjs-core-backbone-localstorage/tree/master/docs) directory and [online here](http://js.docs.typhonrt.org/typhonjs-core-backbone-localstorage/).
 
 ## Usage
 
