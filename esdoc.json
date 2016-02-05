@@ -1,0 +1,10 @@
+{
+   "title": "typhonjs-core-backbone-localstorage",
+   "source": "src",
+   "destination": "docs",
+   "plugins": [ { "name": "esdoc-plugin-jspm" } ],
+   "manual":
+   {
+      "changelog": ["./CHANGELOG.md"]
+   }
+}

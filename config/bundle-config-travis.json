@@ -1,0 +1,25 @@
+{
+   "entryPoints":
+   [
+      {
+         "inMemoryBuild": true,
+         "formats": ["amd"],
+         "mangle": false,
+         "minify": false,
+         "src": "src/localstorage.js",
+         "extraConfig":
+         {
+            "meta":
+            {
+               "backbone": { "build": false },
+               "jquery": { "build": false },
+               "underscore": { "build": false }
+            }
+         },
+         "builderOptions":
+         {
+            "rollup": true
+         }
+      }
+   ]
+}

@@ -1,0 +1,100 @@
+{
+   "entryPoints":
+   [
+      {
+         "destBaseDir": "./dist",
+         "destFilename": "typhonjs-core-backbone-localstorage.js",
+         "formats": ["amd", "cjs"],
+         "mangle": false,
+         "minify": false,
+         "src": "src/localstorage.js",
+         "extraConfig":
+         {
+            "meta":
+            {
+               "backbone": { "build": false },
+               "jquery": { "build": false },
+               "underscore": { "build": false }
+            }
+         },
+         "builderOptions":
+         {
+            "rollup": true
+         }
+      },
+
+      {
+         "destBaseDir": "./dist",
+         "destFilename": "typhonjs-core-backbone-localstorage.js",
+         "formats": ["umd", "global"],
+         "mangle": false,
+         "minify": false,
+         "src": "src/localstorage.js",
+         "extraConfig":
+         {
+            "meta":
+            {
+               "backbone": { "build": false },
+               "jquery": { "build": false },
+               "underscore": { "build": false }
+            }
+         },
+         "builderOptions":
+         {
+            "globalDeps":
+            {
+               "backbone": "Backbone"
+            },
+            "rollup": true
+         }
+      },
+
+      {
+         "destBaseDir": "./dist",
+         "destFilename": "typhonjs-core-backbone-localstorage.min.js",
+         "formats": ["amd", "cjs"],
+         "mangle": false,
+         "minify": false,
+         "src": "src/localstorage.js",
+         "extraConfig":
+         {
+            "meta":
+            {
+               "backbone": { "build": false },
+               "jquery": { "build": false },
+               "underscore": { "build": false }
+            }
+         },
+         "builderOptions":
+         {
+            "rollup": true
+         }
+      },
+
+      {
+         "destBaseDir": "./dist",
+         "destFilename": "typhonjs-core-backbone-localstorage.min.js",
+         "formats": ["umd", "global"],
+         "mangle": false,
+         "minify": false,
+         "src": "src/localstorage.js",
+         "extraConfig":
+         {
+            "meta":
+            {
+               "backbone": { "build": false },
+               "jquery": { "build": false },
+               "underscore": { "build": false }
+            }
+         },
+         "builderOptions":
+         {
+            "globalDeps":
+            {
+               "backbone": "Backbone"
+            },
+            "rollup": true
+         }
+      }
+   ]
+}
