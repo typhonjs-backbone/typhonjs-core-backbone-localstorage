@@ -10,13 +10,29 @@ import Backbone   from 'backbone';
  *
  * ## Usage
  *
- * The recommended way to consume `typhonjs-core-backbone-localstorage` is via JSPM / SystemJS via an ES6 project.
+ * The recommended way to consume `typhonjs-core-backbone-localstorage` is via [JSPM](http://jspm.io/) /
+ * [SystemJS](https://github.com/systemjs/systemjs) via an ES6 project.
  *
  * Please see this JSPM / SystemJS / ES6 demo:
  * [backbone-es6-localstorage-todos](https://github.com/typhonjs-demos/backbone-es6-localstorage-todos)
  *
  * In addition there is a desktop version using [Electron](http://electron.atom.io/) here:
  * [electron-backbone-es6-localstorage-todos](https://github.com/typhonjs-demos/electron-backbone-es6-localstorage-todos)
+ *
+ * Create your ES6 collections like so using a getter for `localStorage`:
+ *
+ * ```javascript
+ * const s_LOCAL_STORAGE = new Backbone.LocalStorage("SomeCollection"); // Unique name within your app.
+ *
+ * export default class SomeCollection extends Backbone.Collection
+ * {
+ *    get localStorage() { return s_LOCAL_STORAGE; }
+ *
+ *    get model() { return SomeModel; }
+ *
+ *    // ... everything else is normal.
+ * });
+ * ```
  *
  * ------
  *
