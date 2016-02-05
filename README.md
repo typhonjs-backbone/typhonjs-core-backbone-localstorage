@@ -5,6 +5,8 @@ and saved into a JSON object. Please see
 [./dist](https://github.com/typhonjs/typhonjs-core-backbone-localstorage/tree/master/dist) for ES5 bundles for AMD, 
 CJS, UMD and global consumption.
 
+For the latest significant changes please see the [CHANGELOG](https://github.com/typhonjs/typhonjs-core-backbone-localstorage/blob/master/CHANGELOG.md).
+
 ## Usage
 
 The recommended way to consume `typhonjs-core-backbone-localstorage` is via JSPM / SystemJS via an ES6 project.
