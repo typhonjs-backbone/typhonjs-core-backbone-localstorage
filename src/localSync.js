@@ -1,6 +1,6 @@
 'use strict';
 
-import result from './result.js';
+import Utils from 'typhonjs-core-utils';
 
 /**
  * Delegates to the model or collection `localStorage` property which should be an instance of `BackboneLocalStorage`.
@@ -12,7 +12,7 @@ import result from './result.js';
  */
 export default function localSync(method, model, options)
 {
-   const store = result(model, 'localStorage') || result(model.collection, 'localStorage');
+   const store = Utils.invokeOrValue(model, 'localStorage') || Utils.invokeOrValue(model.collection, 'localStorage');
 
    let errorMessage, promise, resp;
 

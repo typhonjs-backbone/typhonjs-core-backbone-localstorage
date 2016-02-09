@@ -8,9 +8,9 @@
 
 import Backbone      from 'backbone';
 import LocalStorage  from './LocalStorage.js';
+import Utils         from 'typhonjs-core-utils';
 
 import localSync     from './localSync.js';
-import result        from './result.js';
 
 // Modify Backbone --------------------------------------------------------------------------------------------------
 
@@ -33,8 +33,8 @@ Backbone.getSyncMethod = (model, options) =>
 {
    const forceOriginalSync = options && options.origSync;
 
-   return !forceOriginalSync && (result(model, 'localStorage') || result(model.collection, 'localStorage')) ?
-    localSync : Backbone.origSync;
+   return !forceOriginalSync && (Utils.invokeOrValue(model, 'localStorage') || Utils.invokeOrValue(model.collection,
+    'localStorage')) ? localSync : Backbone.origSync;
 };
 
 /**
