@@ -6,7 +6,7 @@
          "formats": ["amd"],
          "mangle": false,
          "minify": false,
-         "src": "src/localstorage.js",
+         "src": "src/bootstrap.js",
          "extraConfig":
          {
             "meta":

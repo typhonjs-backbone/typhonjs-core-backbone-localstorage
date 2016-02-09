@@ -7,7 +7,7 @@
          "formats": ["amd", "cjs"],
          "mangle": false,
          "minify": false,
-         "src": "src/localstorage.js",
+         "src": "src/bootstrap.js",
          "extraConfig":
          {
             "meta":
@@ -29,7 +29,7 @@
          "formats": ["umd", "global"],
          "mangle": false,
          "minify": false,
-         "src": "src/localstorage.js",
+         "src": "src/bootstrap.js",
          "extraConfig":
          {
             "meta":
@@ -55,7 +55,7 @@
          "formats": ["amd", "cjs"],
          "mangle": false,
          "minify": false,
-         "src": "src/localstorage.js",
+         "src": "src/bootstrap.js",
          "extraConfig":
          {
             "meta":
@@ -77,7 +77,7 @@
          "formats": ["umd", "global"],
          "mangle": false,
          "minify": false,
-         "src": "src/localstorage.js",
+         "src": "src/bootstrap.js",
          "extraConfig":
          {
             "meta":
