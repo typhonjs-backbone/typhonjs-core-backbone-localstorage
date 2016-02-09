@@ -1,6 +1,6 @@
 'use strict';
 
-import Backbone   from 'backbone';
+import localSync from './localSync.js';
 
 /**
  * An ES6 module to replace `Backbone.sync` with browser `localStorage`-based persistence. Models are given GUIDS
@@ -113,7 +113,7 @@ import Backbone   from 'backbone';
  *
  * Original author: [Jerome Gravel-Niquet](https://github.com/jeromegn) (many thanks!)
  */
-class BackboneLocalStorage
+export default class LocalStorage
 {
    /**
     * Our Store is represented by a single JS object in `localStorage`. Create it with a meaningful name, like the name
@@ -124,14 +124,14 @@ class BackboneLocalStorage
     */
    constructor(name, serializer = JSON)
    {
-      if (!localStorage) { throw new Error('Backbone.LocalStorage: Environment does not support `localStorage`.'); }
+      if (!localStorage) { throw new Error('LocalStorage: Environment does not support `localStorage`.'); }
 
-      if (typeof name !== 'string') { throw new TypeError('Backbone.LocalStorage: `name` is not a string.'); }
+      if (typeof name !== 'string') { throw new TypeError('LocalStorage: `name` is not a string.'); }
 
       if (typeof serializer !== 'object' || typeof serializer.stringify !== 'function' ||
        typeof serializer.parse !== 'function')
       {
-         throw new TypeError('Backbone.LocalStorage: `serializer` does not conform to the JSON API.');
+         throw new TypeError('LocalStorage: `serializer` does not conform to the JSON API.');
       }
 
       /**
@@ -299,7 +299,7 @@ class BackboneLocalStorage
     */
    sync(method, model, options)
    {
-      return s_LOCAL_SYNC(method, model, options);
+      return localSync(method, model, options);
    }
 
    /**
@@ -324,57 +324,6 @@ class BackboneLocalStorage
    }
 }
 
-// Modify Backbone --------------------------------------------------------------------------------------------------
-
-/**
- * Store the original sync function from Backbone.
- *
- * @type {function}
- */
-Backbone.origSync = Backbone.sync;
-
-/**
- * Returns the appropriate sync method given optional parameters requesting the default Backbone sync or if
- * the model / collection contains a valid localStorage instance the local sync method.
- *
- * @param {object}   model    - The model or collection instance to synchronize.
- * @param {object}   options  - Optional parameters
- * @returns {function}
- */
-Backbone.getSyncMethod = (model, options) =>
-{
-   const forceOriginalSync = options && options.origSync;
-
-   return !forceOriginalSync && (s_RESULT(model, 'localStorage') || s_RESULT(model.collection, 'localStorage')) ?
-    s_LOCAL_SYNC : Backbone.origSync;
-};
-
-/**
- * Override 'Backbone.sync' to default to s_LOCAL_SYNC, the original 'Backbone.sync' is still available in
- * 'Backbone.origSync'.
- *
- * @param {string}   method   - A string that defines the synchronization action to perform.
- * @param {object}   model    - The model or collection instance to synchronize.
- * @param {object}   options  - Optional parameters
- * @returns {*}
- */
-Backbone.sync = (method, model, options) =>
-{
-   return Backbone.getSyncMethod(model, options).apply(this, [method, model, options]);
-};
-
-/**
- * Store BackboneLocalStorage class in the instance of Backbone.
- *
- * @type {BackboneLocalStorage}
- */
-Backbone.LocalStorage = BackboneLocalStorage;
-
-/**
- * Exports the BackboneLocalStorage class.
- */
-export default BackboneLocalStorage;
-
 // Module private methods -------------------------------------------------------------------------------------------
 
 /**
@@ -385,78 +334,6 @@ export default BackboneLocalStorage;
 const s_GUID = () =>
 {
    return `${s_S4()}${s_S4()}-${s_S4()}-${s_S4()}-${s_S4()}-${s_S4()}${s_S4()}${s_S4()}`;
-};
-
-/**
- * Delegates to the model or collection `localStorage` property which should be an instance of `BackboneLocalStorage`.
- *
- * @param {string}   method - Sync method name.
- * @param {object}   model - Model to sync.
- * @param {object}   options - Optional parameters.
- * @returns {Promise}
- */
-const s_LOCAL_SYNC = (method, model, options) =>
-{
-   const store = s_RESULT(model, 'localStorage') || s_RESULT(model.collection, 'localStorage');
-
-   let errorMessage, promise, resp;
-
-   try
-   {
-      switch (method)
-      {
-         case 'read':
-            resp = model.id !== null && typeof model.id !== 'undefined' ? store.find(model) : store.findAll();
-            break;
-         case 'create':
-            resp = store.create(model);
-            break;
-         case 'update':
-            resp = store.update(model);
-            break;
-         case 'delete':
-            resp = store.destroy(model);
-            break;
-      }
-   }
-   catch (err)
-   {
-      errorMessage = err.code === 22 && store._storageSize() === 0 ? 'Private browsing is unsupported' : err.message;
-   }
-
-   if (resp)
-   {
-      if (options && options.success) { options.success(resp); }
-
-      promise = Promise.resolve(resp);
-   }
-   else
-   {
-      errorMessage = errorMessage ? errorMessage : 'Record Not Found';
-
-      if (options && options.error) { options.error(errorMessage); }
-
-      promise = Promise.reject(errorMessage);
-   }
-
-   // Add compatibility with $.ajax always execute callback for success and error.
-   if (options && options.complete) { options.complete(resp); }
-
-   return promise;
-};
-
-/**
- * Invokes the property as a function if it exists or returns the result.
- *
- * @param {object}   object - Object to inspect.
- * @param {string}   property - Property / function name to invoke or return.
- * @returns {*}
- */
-const s_RESULT = (object, property) =>
-{
-   if (typeof object !== 'object') { return void 0; }
-   const value = object[property];
-   return (typeof value === 'function') ? object[property]() : value;
 };
 
 /**
