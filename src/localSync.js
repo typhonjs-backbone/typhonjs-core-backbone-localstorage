@@ -3,7 +3,7 @@
 import Utils from 'typhonjs-core-utils';
 
 /**
- * Delegates to the model or collection `localStorage` property which should be an instance of `BackboneLocalStorage`.
+ * Delegates to the model or collection `localStorage` property which should be an instance of `LocalStorage`.
  *
  * @param {string}   method - Sync method name.
  * @param {object}   model - Model to sync.
