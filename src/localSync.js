@@ -36,7 +36,8 @@ export default function localSync(method, model, options)
    }
    catch (err)
    {
-      errorMessage = err.code === 22 && store._storageSize() === 0 ? 'Private browsing is unsupported' : err.message;
+      errorMessage = store && err.code === 22 && store._storageSize() === 0 ? 'Private browsing is unsupported' :
+       err.message;
    }
 
    if (resp)
