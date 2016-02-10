@@ -23,7 +23,7 @@ Backbone.origSync = Backbone.sync;
 
 /**
  * Returns the appropriate sync method given optional parameters requesting the default Backbone sync or if
- * the model / collection contains a valid localStorage instance the local sync method.
+ * the model / collection contains a valid localStorage instance for the local sync method.
  *
  * @param {object}   model    - The model or collection instance to synchronize.
  * @param {object}   options  - Optional parameters
@@ -38,7 +38,7 @@ Backbone.getSyncMethod = (model, options) =>
 };
 
 /**
- * Override 'Backbone.sync' to default to s_LOCAL_SYNC, the original 'Backbone.sync' is still available in
+ * Override 'Backbone.sync' to default to `localSync`, the original 'Backbone.sync' is still available in
  * 'Backbone.origSync'.
  *
  * @param {string}   method   - A string that defines the synchronization action to perform.
