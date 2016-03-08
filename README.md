@@ -4,7 +4,7 @@
 [![Code Style](https://img.shields.io/badge/code%20style-allman-yellowgreen.svg?style=flat)](https://en.wikipedia.org/wiki/Indent_style#Allman_style)
 [![License](https://img.shields.io/badge/license-MIT-yellowgreen.svg?style=flat)](https://github.com/typhonjs/typhonjs-core-backbone-localstorage/blob/master/LICENSE)
 
-[![Build Status](https://travis-ci.org/typhonjs/typhonjs-core-backbone-localstorage.svg?branch=master)](https://travis-ci.org/typhonjs/typhonjs-core-backbone-localstorage)
+[![Build Status](https://travis-ci.org/typhonjs-backbone/typhonjs-core-backbone-localstorage.svg?branch=master)](https://travis-ci.org/typhonjs-backbone/typhonjs-core-backbone-localstorage)
 [![Dependency Status](https://www.versioneye.com/user/projects/56b499c30a0ff5002c85f70f/badge.svg?style=flat)](https://www.versioneye.com/user/projects/56b499c30a0ff5002c85f70f)
 
 An ES6 module to replace `Backbone.sync` with browser `localStorage`-based persistence. Models are given GUIDS
