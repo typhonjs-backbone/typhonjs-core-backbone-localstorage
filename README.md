@@ -2,19 +2,20 @@
 
 [![Documentation](http://js.docs.typhonrt.org/typhonjs/typhonjs-core-backbone-localstorage/badge.svg)](http://js.docs.typhonrt.org/typhonjs/typhonjs-core-backbone-localstorage/)
 [![Code Style](https://img.shields.io/badge/code%20style-allman-yellowgreen.svg?style=flat)](https://en.wikipedia.org/wiki/Indent_style#Allman_style)
-[![License](https://img.shields.io/badge/license-MIT-yellowgreen.svg?style=flat)](https://github.com/typhonjs/typhonjs-core-backbone-localstorage/blob/master/LICENSE)
+[![License](https://img.shields.io/badge/license-MPLv2-yellowgreen.svg?style=flat)](https://github.com/typhonjs-backbone/typhonjs-core-backbone-localstorage/blob/master/LICENSE)
+[![Gitter](https://img.shields.io/gitter/room/typhonjs/TyphonJS.svg)](https://gitter.im/typhonjs/TyphonJS)
 
 [![Build Status](https://travis-ci.org/typhonjs-backbone/typhonjs-core-backbone-localstorage.svg?branch=master)](https://travis-ci.org/typhonjs-backbone/typhonjs-core-backbone-localstorage)
-[![Dependency Status](https://www.versioneye.com/user/projects/56b499c30a0ff5002c85f70f/badge.svg?style=flat)](https://www.versioneye.com/user/projects/56b499c30a0ff5002c85f70f)
+[![Dependency Status](https://www.versioneye.com/user/projects/56eb7e124e714c0034fed8b9/badge.svg?style=flat)](https://www.versioneye.com/user/projects/56eb7e124e714c0034fed8b9)
 
 An ES6 module to replace `Backbone.sync` with browser `localStorage`-based persistence. Models are given GUIDS
 and saved into a JSON object. Please see 
-[/dist](https://github.com/typhonjs/typhonjs-core-backbone-localstorage/tree/master/dist) for ES5 bundles for AMD, 
+[/dist](https://github.com/typhonjs-backbone/typhonjs-core-backbone-localstorage/tree/master/dist) for ES5 bundles for AMD, 
 CJS, UMD and global consumption.
 
-For the latest significant changes please see the [CHANGELOG](https://github.com/typhonjs/typhonjs-core-backbone-localstorage/blob/master/CHANGELOG.md).
+For the latest significant changes please see the [CHANGELOG](https://github.com/typhonjs-backbone/typhonjs-core-backbone-localstorage/blob/master/CHANGELOG.md).
 
-API documentation can be found in the [/docs](https://github.com/typhonjs/typhonjs-core-backbone-localstorage/tree/master/docs) directory and [online here](http://js.docs.typhonrt.org/typhonjs/typhonjs-core-backbone-localstorage/).
+API documentation can be found in the [online here](http://js.docs.typhonrt.org/typhonjs/typhonjs-core-backbone-localstorage/).
 
 ## Usage
 
@@ -115,7 +116,7 @@ Please see this RequireJS ES5 demo: [backbone-es6-localstorage-todos-requirejs-e
 ------
 
 To suggest a feature or report a bug:
-https://github.com/typhonjs/typhonjs-core-backbone-localstorage/issues
+https://github.com/typhonjs-backbone/typhonjs-core-backbone-localstorage/issues
 
 This code was forked and updated to ES6 from: 
 [Backbone.localStorage](https://github.com/jeromegn/Backbone.localStorage)
@@ -124,4 +125,4 @@ Original author: [Jerome Gravel-Niquet](https://github.com/jeromegn) (many thank
 
 typhonjs-core-backbone-localstorage (c) 2016-present Michael Leahy, TyphonRT Inc. 
 
-typhonjs-core-backbone-localstorage may be freely distributed under the MIT license.
+typhonjs-core-backbone-localstorage may be freely distributed under the MPL v2.0 license.
